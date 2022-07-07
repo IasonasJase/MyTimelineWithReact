@@ -232,6 +232,7 @@ body {
   margin: 0;
   padding-left: 32px;
   font-size: 16px;
+  word-wrap: break-word;
   text-align: center;
   font-weight: 450;
   color: rgba(113, 113, 113, 255);
@@ -240,6 +241,7 @@ body {
 .container.left .black-box p {
   margin: 0;
   font-size: 16px;
+  word-wrap: break-word;
   padding-left: 32px;
   text-align: center;
   font-weight: 450;
@@ -249,6 +251,7 @@ body {
 .container.right .orange-box p {
   margin: 0;
   font-size: 16px;
+  word-wrap: break-word;
   padding-right: 32px;
   text-align: center;
   font-weight: 450;
@@ -258,6 +261,7 @@ body {
 .container.right .black-box p {
   margin: 0;
   padding-right: 32px;
+  word-wrap: break-word;
   font-size: 16px;
   text-align: center;
   font-weight: 450;
