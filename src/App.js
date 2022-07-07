@@ -1,7 +1,8 @@
-import "./timelineCss.css";
+// import "./timelineCss.css";
+import "./timeline.css";
 import React from "react";
 import { useState, useEffect } from "react";
-import TimelineList from "./TimelineList";
+import Timeline from "./Timeline";
 
 function App() {
   const [input, setInput] = useState("");
@@ -9,10 +10,11 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    let index = timeline.length || 0;
+    const lastElement = timeline[timeline.length - 1] || {};
+    let lastId = lastElement.id || 0;
     if (input.trim() !== "") {
       const newEvent = {
-        id: ++index,
+        id: ++lastId,
         text: input,
         date: new Date().toLocaleString(),
       };
@@ -42,13 +44,14 @@ function App() {
           <button type="submit" className="button">
             Add
           </button>
-          <button className="button" onClick={() => setTimeline([])}>
+          <button type="button" className="button clear" onClick={() => setTimeline([])}>
             Clear
           </button>
         </div>
       </form>
+
       {timeline.map((item, i) => (
-        <TimelineList key={item.id} timeline={item} index={i} />
+        <Timeline key={item.id} timeline={item} index={i} />
       ))}
     </main>
   );

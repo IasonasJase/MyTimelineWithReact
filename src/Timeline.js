@@ -4,7 +4,7 @@ import headphones from "./photos/headphones.svg";
 import ipod from "./photos/ipod.svg";
 import music from "./photos/music.svg";
 
-const TimelineList = ({ timeline, index }) => {
+const Timeline = ({ timeline, index }) => {
   const iconsArray = [football, headphones, ipod, music];
   const conditionalClassName = index % 2 === 0 ? "left" : "right";
   return (
@@ -18,10 +18,12 @@ const TimelineList = ({ timeline, index }) => {
         <div className="img-border">
           <img alt="football-icon" src={iconsArray[index % 4]} className="fa-icon" />
         </div>
-        <div className="black-box"></div>
+        <div className="black-box">
+          <p>{timeline.text}</p>
+        </div>
       </div>
     </div>
   );
 };
 
-export default TimelineList;
+export default Timeline;

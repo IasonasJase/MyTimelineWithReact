@@ -85,25 +85,12 @@ body {
   left: 63.2%;
 }
 
-.container.left::after {
-  content: "";
-  position: absolute;
-  width: 8rem;
-  height: 5rem;
-  top: calc(45%);
-  left: 91.5%;
-  background-color: rgb(234, 232, 223);
-  border: 8px solid rgb(22, 22, 22);
-  border-radius: 16px;
-  z-index: 3;
-}
-
 .container.left::before {
   content: "";
   position: absolute;
   width: 7.8rem;
   height: 5rem;
-  top: calc(50%);
+  top: 96px;
   left: 93%;
   background-color: rgb(233, 187, 83);
   opacity: 0.4;
@@ -111,25 +98,12 @@ body {
   z-index: 1;
 }
 
-.container.right::after {
-  content: "";
-  position: absolute;
-  width: 8rem;
-  height: 5rem;
-  top: calc(45%);
-  left: 91%;
-  background-color: rgb(234, 232, 223);
-  border: 8px solid rgb(22, 22, 22);
-  border-radius: 16px;
-  z-index: 3;
-}
-
 .container.right::before {
   content: "";
   position: absolute;
   width: 7.8rem;
   height: 5rem;
-  top: calc(50%);
+  top: 96px;
   left: -33%;
   background-color: rgb(233, 187, 83);
   opacity: 0.4;
@@ -147,7 +121,7 @@ body {
   width: 40px;
   height: 8px;
   left: 100%;
-  top: calc(50%);
+  top: 80px;
   right: 8px;
   background: rgb(22, 22, 22);
   z-index: 1;
@@ -159,7 +133,7 @@ body {
   width: 40px;
   height: 8px;
   left: -10.5%;
-  top: calc(64%);
+  top: 98px;
   right: 8px;
   background: rgb(22, 22, 22);
   z-index: 1;
@@ -168,7 +142,7 @@ body {
 .container.left .black-box::after {
   content: "";
   position: absolute;
-  top: calc(43.5%);
+  top: 70px;
   left: 109%;
   width: 1.75rem;
   height: 1.75rem;
@@ -179,7 +153,7 @@ body {
 .container.right .orange-box::after {
   content: "";
   position: absolute;
-  top: calc(57%);
+  top: 88px;
   left: -16%;
   width: 1.75rem;
   height: 1.75rem;
@@ -189,13 +163,18 @@ body {
 
 .container .date {
   position: absolute;
-  top: calc(55%);
-  height: 5rem;
   width: 8rem;
+  padding-top: 8px;
+  height: 5rem;
+  top: 88px;
   font-weight: bold;
   text-align: center;
   font-size: large;
-  z-index: 4;
+  left: 91.5%;
+  background-color: rgb(234, 232, 223);
+  border: 8px solid rgb(22, 22, 22);
+  border-radius: 16px;
+  z-index: 3;
 }
 
 .container.left .date {
@@ -203,45 +182,45 @@ body {
 }
 
 .container.right .date {
-  left: -34%;
+  left: -34.5%;
 }
 
 .container.left .orange-box {
+  position: relative;
   width: 75%;
   min-height: 160px;
   padding: 30px 90px 30px 30px;
-  position: relative;
   border: 8px solid rgb(233, 187, 83);
   background-color: rgb(234, 232, 223);
   z-index: 2;
 }
 
 .container.left .black-box {
-  padding: 30px 90px 30px 30px;
-  top: calc(20%);
-  left: 8%;
-  height: 86%;
-  width: 68%;
   position: absolute;
+  padding: 30px 90px 30px 30px;
+  top: 40px;
+  left: 7%;
+  min-height: 160px;
+  width: 68.6%;
   border: 8px solid rgb(22, 22, 22);
   background-color: rgb(234, 232, 223);
   z-index: 1;
 }
 .container.right .black-box {
-  padding: 30px 90px 30px 30px;
-  top: 20%;
-  left: 8%;
-  height: 86%;
-  width: 68%;
   position: absolute;
+  padding: 30px 90px 30px 30px;
+  top: 40px;
+  left: 7%;
+  min-height: 160px;
+  width: 68.6%;
   border: 8px solid rgb(22, 22, 22);
   background-color: rgb(234, 232, 223);
   z-index: 1;
 }
 
 .container.right .orange-box {
-  padding: 30px 30px 30px 90px;
   position: relative;
+  padding: 30px 30px 30px 90px;
   min-height: 160px;
   width: 75%;
   border: 8px solid rgb(233, 187, 83);
@@ -251,10 +230,17 @@ body {
 
 .container.left .orange-box p {
   margin: 0;
-  padding-top: 8px;
-  overflow: hidden;
-  max-height: 96px;
+  padding-left: 32px;
   font-size: 16px;
+  text-align: center;
+  font-weight: 450;
+  color: rgba(113, 113, 113, 255);
+}
+
+.container.left .black-box p {
+  margin: 0;
+  font-size: 16px;
+  padding-left: 32px;
   text-align: center;
   font-weight: 450;
   color: rgba(113, 113, 113, 255);
@@ -262,10 +248,16 @@ body {
 
 .container.right .orange-box p {
   margin: 0;
-  padding-top: 8px;
+  font-size: 16px;
   padding-right: 32px;
-  overflow: hidden;
-  max-height: 96px;
+  text-align: center;
+  font-weight: 450;
+  color: rgba(113, 113, 113, 255);
+}
+
+.container.right .black-box p {
+  margin: 0;
+  padding-right: 32px;
   font-size: 16px;
   text-align: center;
   font-weight: 450;
@@ -274,12 +266,12 @@ body {
 
 .container .img-border {
   width: 15%;
-  height: 30%;
+  height: 20px;
   max-height: 100px;
   z-index: 3;
   position: absolute;
   left: 30%;
-  top: calc(-10%);
+  top: 8px;
   background-color: rgb(234, 232, 223);
 }
 
@@ -289,5 +281,5 @@ body {
   z-index: 3;
   position: absolute;
   left: 22%;
-  top: calc(-5%);
+  top: -32px;
 }
