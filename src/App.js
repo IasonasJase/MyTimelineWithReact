@@ -28,7 +28,7 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("timeline-items", JSON.stringify(timeline));
-  }, [timeline]);
+  }, [timeline, input]);
 
   return (
     <main className="wrapper">
